@@ -1,5 +1,6 @@
 package com.forjadesoftware.gerardo.economiahogar;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,13 +48,14 @@ public class AddActivity extends AppCompatActivity {
         String postEt4 = et4.getText().toString();
         //db.setValue("Hello, world");
         String key = db.child("post").push().getKey();
-        Gasto nuevo = new Gasto(postEt1,postEt2,postEt3,postEt4);
+        Gasto nuevo = new Gasto(mAuth.getCurrentUser().getUid(),postEt1,postEt2,postEt3,postEt4);
         Map<String, Object>postValues=nuevo.toMap();
         Map<String,Object> chilUpdates=new HashMap<>();
         chilUpdates.put("/post/"+key,postValues);
         db.updateChildren(chilUpdates);
 
         Toast.makeText(AddActivity.this,"Click",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(AddActivity.this, MainActivity.class));
 
 /**
  *
@@ -71,11 +73,13 @@ return null;
 
 
     class Gasto{
+        String userid;
         String monto;
         String etiqueta;
         String lugar;
 
-        public Gasto(String monto, String etiqueta, String lugar, String fecha) {
+        public Gasto(String userid,String monto, String etiqueta, String lugar, String fecha) {
+            this.userid=userid;
             this.monto = monto;
             this.etiqueta = etiqueta;
             this.lugar = lugar;
@@ -122,6 +126,7 @@ return null;
         @Exclude
         public Map<String, Object> toMap() {
             HashMap<String, Object> result = new HashMap<>();
+            result.put("userid",userid);
             result.put("monto", monto);
             result.put("etiqueta", etiqueta);
             result.put("lugar", lugar);

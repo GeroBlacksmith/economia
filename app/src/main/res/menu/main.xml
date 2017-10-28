@@ -10,4 +10,11 @@
         android:id="@+id/action_logout"
         app:showAsAction="never"></item>
 
+    <item android:title="User"
+        android:enabled="false"
+        android:orderInCategory="102"
+        android:id="@+id/action_user"
+        app:showAsAction="never"></item>
+
+
 </menu>
