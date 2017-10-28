@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "504065873539",
+    "firebase_url": "https://economia-c7c5c.firebaseio.com",
+    "project_id": "economia-c7c5c",
+    "storage_bucket": "economia-c7c5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504065873539:android:71bf0302bb435ccf",
+        "android_client_info": {
+          "package_name": "com.forjadesoftware.gerardo.economiahogar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504065873539-dlstlfto1sgp4fr9cbg9tl8qi65jj0rm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forjadesoftware.gerardo.economiahogar",
+            "certificate_hash": "315c7c499dee7ce1d4ea51735556c1238db54b57"
+          }
+        },
+        {
+          "client_id": "504065873539-gh4qqp1pb43gjrktq1ifcdtqhkptce4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW8bP4fb9qe-IsdXOF35k6Iqh8g_GUhAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504065873539-gh4qqp1pb43gjrktq1ifcdtqhkptce4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
